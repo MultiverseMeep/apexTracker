@@ -2,7 +2,8 @@ import matplotlib.pyplot as plt
 import numpy
 
 # Using readline()
-file1 = open('coordinates.txt', 'r')
+filename = "2021-06-25_21-58-419.csv"
+file1 = open('coordinateData/' + filename, 'r')
 count = 0
 xList = []
 yList = []
@@ -45,9 +46,9 @@ while True:
     except:
         pass
 if (int(map) == 2):
-    img = plt.imread("worldsEdge.png")
+    img = plt.imread("mapData/worldsEdge.png")
 if (int(map) == 1):
-    img = plt.imread("olympus.png")
+    img = plt.imread("mapData/olympus.png")
 
 fig, ax = plt.subplots()
 ax.imshow(img, extent=[0, 1, 0, 1])
